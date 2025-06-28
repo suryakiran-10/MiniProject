@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <title>Coding Conference</title>
+    <style>
+        table{
+            border-style: dotted;
+        }
+        .star{
+            color: red;
+        }
+    </style>
+    </head>
+    <p align="center" class="Coding">Coding Conf</p>
+    <body  class="container hbg">
+        
+        <p class="fontone">
+            Your Journey to Coding Conf <br>   2025 Starts Here!
+        </p>
+        <p class="font2">Secure your spot at next year's biggest coding conference</p>
+        <form id="Registration" autocomplete="off">
+            <label for="avatar"><pre>Upload Avatar                 </pre></label>
+            
+            <table align="center">
+                <tr>
+                    <td>
+                        <div class="upload-area" id="avatarbox">
+                        <input type="file" id="avatar" style="display: none;"><br>
+                        <label for="avatar" style="cursor: pointer;">
+                            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 30px; color: rgb(248, 0, 0);"></i>
+                            <p >Drag and drop or click to upload</p>
+                        </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <small class="smallsize"><pre>*Upload your photo (JPG or PNG, max size: 500kb) </pre></small>
+
+            <label for="name"><pre>Full Name                     </pre></label>
+            <input type="text" id="name" required onpaste="return false"/><br>
+
+            <label for="email"><pre>Email Address                  </pre></label>
+            <input type="text" id="email" placeholder="example@email.com" required onpaste="return false"/><br>
+
+            <label for="username"><pre>GitHub Username                </pre></label>
+            <input type="text" id="username" placeholder="@yourusername" required onpaste="return false"/><br>
+        
+
+            <br><button type="submit">Generate My Ticket</button>
+        </form>
+        
+        <link rel="stylesheet" href="g.css">
+        <script src="valid.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Ticket</title>
+  <style> 
+    body {
+      margin: 0;
+      background-image: url(i2.webp);
+      background-position:center;
+      background-size:100%;
+      background-repeat:no-repeat;
+      height:100vh;
+      width:100%;
+      margin: 0%;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <div class="header"> 
+        <h1>Congrats,<span id="congratsname">!</span><br>Your Ticket is ready</h1>
+        <p>We have emailed your ticket to <span id="emailconfirm"></span> and will send updates in the run up to event</p>
+    </div>
+    <div class="ticket-container">
+         <div class="ticket">
+        <div class="tear-line"></div>
+        <img class="avatar" id="avatarImage" src="" alt="Avatar">
+        <div class="info"><strong>Full Name:</strong> <span id="displayName"></span></div>
+        <div class="info"><strong>Email:</strong> <span id="displayEmail"></span></div>
+        <div class="info"><strong>GitHub:</strong> <span id="displayUsername"></span></div>
+        <div class="ticket-code">#<span id="ticketCode"></span></div>
+        <img src="qr.png" alt="QR Code" class="qr">
+  </div>
+    </div>
+
+  <script>
+    const name=localStorage.getItem("name")|| "Your Name";
+    const email=localStorage.getItem("email")|| "email@example.com";
+
+    document.getElementById("displayName").textContent = name;
+    document.getElementById("displayEmail").textContent =  email;
+    document.getElementById("congratsname").textContent = name;
+    document.getElementById("emailconfirm").textContent =  email;
+    document.getElementById("avatarImage").src = localStorage.getItem("avatarData") || "https://img.freepik.com/premium-vector/man-avatar-profile-picture-isolated-background-avatar-profile-picture-man_1293239-4841.jpg";
+    document.getElementById("displayUsername").textContent = localStorage.getItem("username") || "@yourhandle";
+    document.getElementById("ticketCode").textContent =localStorage.getItem("ticketCode") || "XXXXXXXX";
+    </script>
+  <link rel="stylesheet" href="g.css">
+</body>
+</html>
